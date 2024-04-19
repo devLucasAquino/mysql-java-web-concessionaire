@@ -7,30 +7,29 @@ public class Veiculo {
 	private String modelo;
 	private String cor;
 	private String ano;
+	private String id_cliente;
 	
-	
-	
-	
-	
-	
+
 	
 	
 	
 	public Veiculo() {};
 	
-	public Veiculo(String marca, String modelo, String cor, String ano) {
+	public Veiculo(String marca, String modelo, String cor, String ano, String id_cliente) {
 		this.marca = marca;
 		this.modelo = modelo;
 		this.cor = cor;
 		this.ano = ano;
+		this.id_cliente = id_cliente;
 	}
 	
-	public Veiculo(Integer id, String marca, String modelo, String cor, String ano) {
+	public Veiculo(Integer id, String marca, String modelo, String cor, String ano, String id_cliente) {
 		this.id = id;
 		this.marca = marca;
 		this.modelo = modelo;
 		this.cor = cor;
 		this.ano = ano;
+		this.id_cliente = id_cliente;
 	}
 	
 	
@@ -78,6 +77,21 @@ public class Veiculo {
 	public void setDate(String ano) {
 		this.ano = ano;
 	}
+
+	public String getId_cliente() {
+		return id_cliente;
+	}
+
+	public void setId_cliente(String id_cliente) {
+		this.id_cliente = id_cliente;
+	}
+	
+	
+	
+	
+	
+	
+	
 
 	
 

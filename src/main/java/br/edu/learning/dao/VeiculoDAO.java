@@ -10,16 +10,16 @@ public class VeiculoDAO {
 	
 	
 	private final String SQLINSERT = 
-			"insert into VEICULO (MARCA, MODELO, COR, ANO) values(?, ?, ?, ?)";
+			"insert into VEICULO (MARCA, MODELO, COR, ANO, ID_CLIENTE) values(?, ?, ?, ?, ?)";
 	
 	private final String SQLSELECT = 
-			"select ID, MARCA, MODELO, COR, ANO from VEICULOS";
+			"select ID, MARCA, MODELO, COR, ANO, ID_CLIENTE from VEICULOS";
 	
 	private final String SQLSELECT_ID = 
-			"select ID, MARCA, MODELO, COR, ANO from VEICULOS where id = ?";
+			"select ID, MARCA, MODELO, COR, ANO, ID_CLIENTE from VEICULOS where id = ?";
 	
 	private final String SQLUPDATE = 
-			"update VEICULO set MARCA = ?, MODELO = ?, COR = ?, ANO = ? where ID = ?";
+			"update VEICULO set MARCA = ?, MODELO = ?, COR = ?, ANO = ?, set ID_CLIENTE = ? where ID = ?";
 	
 	private final String SQLDELETE = 
 			"delete from VEICULO where ID = ?";
@@ -41,6 +41,7 @@ public class VeiculoDAO {
             	ps.setString(2, vei.getModelo());
             	ps.setString(3, vei.getCor());
             	ps.setString(4, vei.getAno());
+            	ps.setString(5, vei.getId_cliente());
             	
             	System.out.println(vei.getMarca());
             	ps.execute();

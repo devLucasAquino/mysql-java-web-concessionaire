@@ -12,7 +12,6 @@ public class Novo {
 		VeiculoDAO vDAO = new VeiculoDAO();
 		
 		vDAO.novoVeiculo(vei);
-		''
 
 		
 	}
